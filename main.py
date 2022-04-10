@@ -28,8 +28,22 @@ class Vector:
         return cos
 
 
-V1 = Vector(1, 2, 3)
-V2 = Vector(4, -3, 0)
+while True:
+    try:
+        x, y, z = map(int, input('Введите через пробел три координаты первого вектора: ').split())
+        break
+    except ValueError:
+        print('Ошибка! Необходимо ввести три значения через пробел!\n')
+
+while True:
+    try:
+        x1, y1, z1 = map(int, input('Введите через пробел три координаты второго вектора: ').split())
+        break
+    except ValueError:
+        print('Ошибка! Необходимо ввести три значения через пробел!\n')
+
+V1 = Vector(x, y, z)
+V2 = Vector(x1, y1, z1)
 
 menu = ''
 while menu != 0:
